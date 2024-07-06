@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <header>
+        
+        <h1 class="titulo"><img src="unnamed.png" class="alura">Encriptador de Texto con Alura</h1>
+        
+    </header>
+<main class="presentacion">
+        <section class="contenedor">
+            <textarea id="texto" class="texto_encriptar" placeholder="Ingresa el texto aqui... solo minusculas y sin acentos"></textarea>
+                <div class="botones_izquierda">
+                     <button onclick ="encriptartexto();" class ="container__boton">Encriptar</button>
+                     <button onclick ="desencriptartexto();" class ="container__boton">Desencriptar</button>
+                     <button onclick ="limpiar();" class ="container__boton">Limpiar</button>
+                     <button onclick ="pegar();" class ="container__boton">Pegar</button>
+                </div>
+        </section>
+        <section class="contenedor_dos">
+            <textarea id="texto_encriptado" class="texto" placeholder=" "></textarea>
+            <div class="placeholder-content">
+                <img src="Hackerman.png" alt="hackerman Mr. Robot" class="placeholder-image">
+                <p class="texto_uno">Ningun mensaje fue encontrado</p>
+                <p class="texto_dos">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+                <div class="boton_derecha">
+            <button onclick ="copiar();" class ="container__boton_dos">Copiar</button>
+                </div>
+        </section>
+        
+        
+</main>
+         <footer>
+            <p class="footer">Desarrollado por Misael Martinez Rueda</p>
+         </footer>
+        <script src="app.js"></script>
+</body>
+</html>
