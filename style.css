@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color-primario: black;
+    --color-secundario: white;
+    --color-tres: rgb(27, 231, 27);
+    --color-cuatro: rgb(231, 71, 22);
+    --color-cinco: rgb(243, 243, 243);
+    --fuente-Exo2: "Exo 2", sans-serif;
+    --fuente-Roboto: "Roboto", sans-serif;
+}
+
+body,html {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    z-index: 1;
+
+}
+
+.titulo{
+    text-align: center;
+    padding: 2% 0% 0% 0%;
+    font-family: var(--fuente-Exo2);
+    font-size: 4rem;
+    color: var(--color-cinco);
+}
+
+.alura{
+    height: 6rem;
+    padding: 0% 2% 0% 0%;
+}
+
+.presentacion{
+    width: auto;
+    display: flex;
+    padding: 5% 5% 5% 5%;
+    justify-content: space-between;
+    
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column; 
+    width: 60%;
+  
+}
+
+.texto_encriptar{
+    height: 200%;
+    resize: none;
+    border: 0.1rem solid var(--color-cuatro);
+    background-color: transparent;
+    box-shadow: 0px 5px 50px 10px var(--color-cuatro);
+    color: var(--color-secundario);
+    font-family: var(--fuente-Exo2);
+    font-size: 220%;
+}
+
+.botones_izquierda{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 6% 0% 6%;
+}
+
+.contenedor_dos{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    width: 30%;
+}
+
+textarea.texto{
+    height: 30rem;
+    border: 2px solid var(--color-secundario);
+    pointer-events: none;
+    resize: none;
+    border: 0.1rem solid var(--color-cuatro);
+    background-color: transparent;
+    box-shadow: 0px 5px 50px 10px var(--color-cuatro);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+    font-family: var(--fuente-Exo2);
+    font-size: 220%;
+}
+
+.placeholder-content{
+    padding-top: 10%;
+    position: absolute;
+    width: 100%; 
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.texto_uno{
+    padding-top: 2%;
+    font-family: var(--fuente-Exo2);
+    font-size: 200%;
+    color: var(--color-secundario);
+}
+
+.texto_dos{
+    padding-top: 2%;
+    font-family: var(--fuente-Exo2);
+    font-size: 100%;
+    color: var(--color-secundario);
+}
+
+textarea:focus + .placeholder-content,
+textarea:not(:placeholder-shown) + .placeholder-content {
+    display: none;
+}
+
+.boton_derecha{
+    display: flex;
+    justify-content: center;
+    padding: 6% 12% 0% 12%;
+}
+
+.container__boton{
+    width: 20%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    padding: 1.5% 2.5% 1.5% 2.5%;
+    border-radius: 20px;
+    border: 0.1rem solid var(--color-tres);
+    font-family: var(--fuente-Roboto);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container__boton_dos{
+    width: 40%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    padding: 3% 5% 3% 5%;
+    border-radius: 20px;
+    border: 0.1rem solid var(--color-tres);
+    font-family: var(--fuente-Roboto);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container__boton:hover{
+    box-shadow: 0px 5px 50px 10px var(--color-tres);
+}
+
+.container__boton_dos:hover{
+    box-shadow: 0px 5px 50px 10px var(--color-tres);
+}
+
+.footer{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 2rem;
+    color: var(--color-tres);
+    font-family: var(--fuente-Exo2);
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 760px){
+
+    .titulo{
+        padding: 5% 0 0 0;
+        font-size: 1rem;
+    }
+
+    .alura{
+        height: 3rem;
+    }
+
+    .presentacion{
+        width: auto;
+        display: flex;
+        padding: 5% 5% 5% 5%;
+        flex-direction: column;
+    }
+
+    .contenedor{
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        height: 200%;
+        padding-bottom: 4%;
+    }
+
+    .texto_encriptar{
+        height: 30rem;
+        font-size: 100%;
+
+    }
+
+
+    .container__boton{
+        font-size: 0.6rem;
+        width: 25%;
+    }
+
+   
+    .contenedor_dos{
+       width: 100%;
+       height: 15rem;
+       font-size: 50%;
+    }
+
+    .placeholder-image{
+        width: 0%;
+    }
+
+    .texto_uno{
+        padding-top: 2%;
+        font-family: var(--fuente-Exo2);
+        font-size: 100%;
+        color: var(--color-secundario);
+    }
+    
+    .texto_dos{
+        padding-top: 2%;
+        font-family: var(--fuente-Exo2);
+        font-size: 50%;
+        color: var(--color-secundario);
+    }
+
+    .container__boton_dos{
+        font-size: 0.6rem;
+        width: 25%;
+    }
+
+    .footer{
+        
+        font-size: 0.8rem;
+        
+    }
+
+    
+}
+
+@media (min-width: 800px) and (max-width: 1200px){
+    .titulo{
+        padding: 5% 0 0 0;
+        font-size: 2.5rem;
+    }
+
+    .alura{
+        height: 4.5rem;
+    }
+
+    .presentacion{
+        width: auto;
+        display: flex;
+        padding: 5% 5% 5% 5%;
+        flex-direction: column;
+    }
+
+    .contenedor{
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        height: 200%;
+        padding-bottom: 4%;
+    }
+
+    .texto_encriptar{
+        height: 25rem;
+        font-size: 180%;
+
+    }
+
+    .container__boton{
+        font-size: 0.8rem;
+        width: 20%;
+    }
+
+   
+    .contenedor_dos{
+       width: 100%;
+       height: 17rem;
+    }
+
+    .placeholder-image{
+        width: 0%;
+    }
+
+    .texto_uno{
+        padding-top: 2%;
+        font-family: var(--fuente-Exo2);
+        font-size: 150%;
+        color: var(--color-secundario);
+    }
+    
+    .texto_dos{
+        padding-top: 2%;
+        font-family: var(--fuente-Exo2);
+        font-size: 100%;
+        color: var(--color-secundario);
+    }
+
+    .container__boton_dos{
+        font-size: 0.8rem;
+        width: 20%;
+        padding: 1.5% 6% 1.5% 6%;
+    }
+
+    .footer{
+        
+        font-size: 1.2rem;
+        
+    }
+
+
+
+}
